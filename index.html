@@ -18,13 +18,42 @@
   <link rel="icon" type="image/x-icon" href="icons8-brainstorm-skill-24.png">
 
   <meta name="theme-color" content="#fafafa">
+  
+  <style>
+    .ityped-cursor {
+    font-size: 1em;
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+    }
+
+    @keyframes blink {
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes blink {
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @-moz-keyframes blink {
+        100% {
+            opacity: 0;
+        }
+    }
+  </style>
+  
 </head>
 
 <body>
 
   <div class="container">
     <h1>すけろくQuiz</h1>
-    <p>目指せ！全問正解！！</p>
     <div class="jumbotron mt-5">
       <div class="d-flex justify-content-center">
         <div id="js-question" class="alert alert-primary" role="alert">
@@ -50,6 +79,13 @@
   </div>
 
   <script src="index.js"></script>
+  <script src="https://unpkg.com/ityped@1.0.2"></script>
+
+  <script>
+    ityped.init(document.querySelector("#ityped"), {
+      strings: ['中居陽亮に関するクイズ！','「すけろく」はあだ名です！','目指せ！全問正解！！','全部で４問！', 'Let’s Try！']
+    })
+  </script>
 </body>
 
 </html>
